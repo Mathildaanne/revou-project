@@ -1,0 +1,327 @@
+body {
+    background-color: #FA8072;
+    color: white;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+main {
+    padding: 32px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: large;
+    text-align: center;
+}
+
+/* Title untuk setiap Slice */
+.tittle {
+    text-align: center;
+}
+
+/* Start of Navigasi */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+nav>a{
+    padding: 25px 32px;
+    background-color: #FAFAD2;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+nav>a:hover {
+    background-color: #8B0000;
+    color: white;
+  }
+/* End of Navigasi */
+
+/* Start of HomePage */
+.home-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Start of Banner Autoslide */
+.banner-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+/* Image banner */
+.banner-item {
+    margin-right: 80px;
+    margin bottom: 30px;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Tombol Next & previous  */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    margin-right: 800px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Posisi tombol 'Next' ke kanan */
+.next {
+    right: -750px;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* Pada hover, tambah background warna hitam transparan */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Titik Slide */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Animasi memudar */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+/*End of Banner Autoslide*/
+
+/* Start halaman about us*/
+.about-us {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us-img {
+    width: 50%;
+}
+
+.about-us-text {
+    text-align: left;
+}
+/* End halaman about us*/
+
+
+/*Our Profile*/
+.profile-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+.profile-item {
+    text align: center;
+}
+
+.profile-icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    opacity: 1;
+    display: block;
+}
+/* End Ourprofile */
+
+/*Portofolio*/
+.portofolio-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.portofolio-icon {
+    width : 200px;
+    height: 250px;
+    border: 10px solid white;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.portofolio-icon:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+/* End Portofolio */
+
+/* form */
+.input-form {
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-container {
+    padding: 50px;
+    border: 2px, solid;
+    width: 400px;
+}
+
+.output-text {
+    text-align: left;
+}
+
+#message {
+    height: 100px;
+    width: 300px;
+}
+
+.submit-btn {
+    font-size: large;
+    width: 450px;
+    height: 50px;
+    background-color: #FAFAD2;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.submit-btn:hover {
+    background-color: #8B0000;
+    color: white;
+}
+
+/*media query*/
+@media only screen and (max-width: 700px) {
+    h1 {
+        text-align: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .home-page {
+        flex-direction: column;
+    }
+
+    .banner-container {
+        margin-top: 50px;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us-img {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+    }
+
+    .profile-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portofolio-content {
+        flex-direction: column;
+    }
+
+    .portofolio-item {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .output-container {
+        margin-top: 60px;
+    }
+
+    .prev, .next,.text {
+        font-size: 20px;
+        margin-top: 85%;
+        margin-right: 740px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        margin-bottom: 30px;
+    }
+    .menu {
+        display: flex;
+        margin-bottom: 10px;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .about-us-img {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .prev, .next,.text {
+        font-size: 15px;
+        margin-top: 170%;
+        margin-right: 500px;
+    }
+}
+
